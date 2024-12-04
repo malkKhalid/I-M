@@ -6,6 +6,7 @@
 @endsection
 @section('content')
 
+
     <div class="content w-full">
     <!-- start head -->
     <div class="head d-flex-compo bg-white p-20">
