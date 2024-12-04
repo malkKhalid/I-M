@@ -1,0 +1,77 @@
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --gray-color: #888;
+}
+
+.plan-page {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+.plan-page > div {
+  width: 450px;
+}
+@media (max-width: 767px) {
+  .plan-page {
+    grid-template-columns: minmax(250px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+  .plan-page > div {
+    width: 270px;
+  }
+}
+
+.plan .top {
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+.plan.green .top {
+  outline-color: var(--green-color);
+}
+.plan.blue .top {
+  outline-color: var(--blue-color);
+}
+.plan.orange .top {
+  outline-color: var(--orange-color);
+}
+
+.plan .top .price {
+  position: relative;
+  font-size: 40px;
+  width: fit-content;
+  margin: auto;
+}
+.plan .top .price span {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  font-size: 25px;
+}
+
+.plan ul li {
+  padding: 20px 0px;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+.plan ul li i:first-child {
+  font-size: 15px;
+  margin-right: 7px;
+}
+.plan ul li .yes {
+  color: var(--green-color);
+}
+.plan ul li i:not(.yes, .help) {
+  color: var(--red-color);
+}
+.plan ul li .help {
+  color: var(--gray-color);
+  margin-left: auto;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+}

@@ -1,106 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- css files -->
-    <link rel="stylesheet" href="./css/framwork.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/freinds.css" />
-    <!-- font awasome for icons  -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="./css/all.min.css" />
-    <link rel="stylesheet" href="./css/node_modules/normalize.css/" />
-    <!-- end css files -->
-
-    <title>Freinds</title>
-  </head>
-  <body>
-    <div class="page d-flex p-relative">
-      <!-- start sidebar -->
-      <div class="sidebar bg-white p-20 p-relative">
-        <h3 class="p-relative tx-c mt-0">Elzero</h3>
-        <ul>
-          <li>
-            <a
-              href="main.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-regular fa-chart-bar fa-fw"></i>
-              <span class="hide-mobile">Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="setting.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-solid fa-gear fa-fw"></i>
-              <span class="hide-mobile">settings</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="profile.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-regular fa-user fa-fw"></i>
-              <span class="hide-mobile">profile</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="projects.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-solid fa-diagram-project fa-fw"></i>
-              <span class="hide-mobile">projects</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="courses.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-solid fa-graduation-cap fa-fw"></i>
-              <span class="hide-mobile">Courses</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="freinds.html"
-              class="active d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-regular fa-circle-user fa-fw"></i>
-              <span class="hide-mobile">Freinds</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="files.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-regular fa-file fa-fw"></i>
-              <span class="hide-mobile">Files</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="plan.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-regular fa-credit-card fa-fw"></i>
-              <span class="hide-mobile">Plans</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- end sidebar -->
+@extends('Admin.master')
+@section('style')
+   <!-- css files -->
+   <link rel="stylesheet" href="{{asset('DashBoard/css/freinds.css')}}" />
+   <!-- end css files -->
+@endsection
+@section('content')
       <div class="content w-full">
         <!-- start head -->
         <div class="head d-flex-compo bg-white p-20">
@@ -111,7 +15,7 @@
             <span class="notification p-relative">
               <i class="fa-regular fa-bell fa-lg"></i>
             </span>
-            <img src="./images/Untitled.jpg" />
+            <img src="{{asset('DashBoard/images/Untitled.jpg')}}" />
           </div>
         </div>
         <!-- end head -->
@@ -125,7 +29,7 @@
             </div>
             <div class="tx-c">
               <img
-                src="./images/friend-01.jpg"
+                src="{{asset('DashBoard/images/friend-01.jpg')}}"
                 alt=""
                 class="rad-half mt-10 mb-10 w-100 h-100"
               />
@@ -170,7 +74,7 @@
             </div>
             <div class="tx-c">
               <img
-                src="./images/friend-02.jpg"
+                src="{{asset('DashBoard/images/friend-02.jpg')}}"
                 alt=""
                 class="rad-half mt-10 mb-10 w-100 h-100"
               />
@@ -214,7 +118,7 @@
             </div>
             <div class="tx-c">
               <img
-                src="./images/friend-03.jpg"
+                src="{{asset('DashBoard/images/friend-03.jpg')}}"
                 alt=""
                 class="rad-half mt-10 mb-10 w-100 h-100"
               />
@@ -258,7 +162,7 @@
             </div>
             <div class="tx-c">
               <img
-                src="./images/friend-04.jpg"
+                src="{{asset('DashBoard/images/friend-04.jpg')}}"
                 alt=""
                 class="rad-half mt-10 mb-10 w-100 h-100"
               />
@@ -303,7 +207,7 @@
             </div>
             <div class="tx-c">
               <img
-                src="./images/friend-05.jpg"
+                src="{{asset('DashBoard/images/friend-05.jpg')}}"
                 alt=""
                 class="rad-half mt-10 mb-10 w-100 h-100"
               />
@@ -348,7 +252,7 @@
             </div>
             <div class="tx-c">
               <img
-                src="./images/friend-01.jpg"
+                src="{{asset('DashBoard/images/friend-01.jpg')}}"
                 alt=""
                 class="rad-half mt-10 mb-10 w-100 h-100"
               />
@@ -392,7 +296,7 @@
             </div>
             <div class="tx-c">
               <img
-                src="./images/friend-03.jpg"
+                src="{{asset('DashBoard/images/friend-03.jpg')}}"
                 alt=""
                 class="rad-half mt-10 mb-10 w-100 h-100"
               />
@@ -431,6 +335,4 @@
           <!-- end freind  -->
         </div>
       </div>
-    </div>
-  </body>
-</html>
+@endsection

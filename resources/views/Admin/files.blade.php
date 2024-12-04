@@ -1,106 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- css files -->
-    <link rel="stylesheet" href="./css/framwork.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/files.css" />
-    <!-- font awasome for icons  -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="./css/all.min.css" />
-    <link rel="stylesheet" href="./css/node_modules/normalize.css/" />
-    <!-- end css files -->
-
-    <title>Files</title>
-  </head>
-  <body>
-    <div class="page d-flex p-relative">
-      <!-- start sidebar -->
-      <div class="sidebar bg-white p-20 p-relative">
-        <h3 class="p-relative tx-c mt-0">Elzero</h3>
-        <ul>
-          <li>
-            <a
-              href="main.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-regular fa-chart-bar fa-fw"></i>
-              <span class="hide-mobile">Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="setting.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-solid fa-gear fa-fw"></i>
-              <span class="hide-mobile">settings</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="profile.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-regular fa-user fa-fw"></i>
-              <span class="hide-mobile">profile</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="projects.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-solid fa-diagram-project fa-fw"></i>
-              <span class="hide-mobile">projects</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="courses.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-solid fa-graduation-cap fa-fw"></i>
-              <span class="hide-mobile">Courses</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="freinds.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-regular fa-circle-user fa-fw"></i>
-              <span class="hide-mobile">Freinds</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="files.html"
-              class="active d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-regular fa-file fa-fw"></i>
-              <span class="hide-mobile">Files</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="plan.html"
-              class="d-flex align-center fsz-15 c-black rad-6 p-10"
-            >
-              <i class="fa-regular fa-credit-card fa-fw"></i>
-              <span class="hide-mobile">Plans</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- end sidebar -->
+@extends('Admin.master')
+@section('style')
+   <!-- css files -->
+   <link rel="stylesheet" href="{{asset('DashBoard/css/files.css')}}" />
+   <!-- end css files -->
+@endsection
+@section('content')
       <div class="content w-full">
         <!-- start head -->
         <div class="head d-flex-compo bg-white p-20">
@@ -111,7 +15,7 @@
             <span class="notification p-relative">
               <i class="fa-regular fa-bell fa-lg"></i>
             </span>
-            <img src="./images/Untitled.jpg" />
+            <img src="{{asset('DashBoard/images/Untitled.jpg')}}" />
           </div>
         </div>
         <!-- end head -->
@@ -172,7 +76,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/pdf.svg" alt="" />
+                <img src="{{asset('DashBoard/images/pdf.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">my pdf file</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">israa osama</p>
@@ -186,7 +90,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/avi.svg" alt="" />
+                <img src="{{asset('DashBoard/images/avi.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">project 1</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">israa osama</p>
@@ -200,7 +104,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/dll.svg" alt="" />
+                <img src="{{asset('DashBoard/images/dll.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">project 2</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">
@@ -216,7 +120,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/eps.svg" alt="" />
+                <img src="{{asset('DashBoard/images/eps.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">Dashboard project</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">mona bana</p>
@@ -230,7 +134,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/psd.svg" alt="" />
+                <img src="{{asset('DashBoard/images/psd.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">project 4</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">israa osama</p>
@@ -244,7 +148,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/pdf.svg" alt="" />
+                <img src="{{asset('DashBoard/images/pdf.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">IOT research</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">Sami ahmad</p>
@@ -258,7 +162,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/avi.svg" alt="" />
+                <img src="{{asset('DashBoard/images/avi.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">project 5</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">osama</p>
@@ -272,7 +176,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/eps.svg" alt="" />
+                <img src="{{asset('DashBoard/images/eps.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">project 7</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">israa osama</p>
@@ -286,7 +190,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/dll.svg" alt="" />
+                <img src="{{asset('DashBoard/images/dll.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">ahmad website</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">lama ziad</p>
@@ -300,7 +204,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/pdf.svg" alt="" />
+                <img src="{{asset('DashBoard/images/pdf.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">my pdf file</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">soad ali</p>
@@ -314,7 +218,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/dll.svg" alt="" />
+                <img src="{{asset('DashBoard/images/dll.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">project 4</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">israa osama</p>
@@ -328,7 +232,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/eps.svg" alt="" />
+                <img src="{{asset('DashBoard/images/eps.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">my pdf file</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">malak ahmad</p>
@@ -342,7 +246,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/psd.svg" alt="" />
+                <img src="{{asset('DashBoard/images/psd.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">demma mohamad</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">israa osama</p>
@@ -356,7 +260,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/avi.svg" alt="" />
+                <img src="{{asset('DashBoard/images/avi.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">ali ali</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">israa osama</p>
@@ -370,7 +274,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/pdf.svg" alt="" />
+                <img src="{{asset('DashBoard/images/pdf.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">my pdf file</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">lama salem</p>
@@ -384,7 +288,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/eps.svg" alt="" />
+                <img src="{{asset('DashBoard/images/eps.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">new form</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">ahmad ahmad</p>
@@ -398,7 +302,7 @@
             <div class="file-card bg-white rad-6 p-10">
               <i class="fa-solid fa-download c-grey p-absolute"></i>
               <div class="icon">
-                <img src="./images/dll.svg" alt="" />
+                <img src="{{asset('DashBoard/images/dll.svg')}}" alt="" />
               </div>
               <p class="capatilize tx-c m-0 fsz-15">my pdf file</p>
               <p class="capatilize tx-c m-0 mt-5 fsz-13 c-gray">israa osama</p>
@@ -412,6 +316,5 @@
           <!-- end files  -->
         </div>
       </div>
-    </div>
-  </body>
-</html>
+@endsection
+

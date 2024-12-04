@@ -1,0 +1,218 @@
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --gray-color: #888;
+}
+
+/* start toggle switch */
+.toggle-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.toggle-switch {
+  background-color: #ccc;
+  border-radius: 16px;
+  width: 70px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.toggle-switch::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f00d";
+  font-weight: 900;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 3px;
+  left: 4px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #dddada;
+  transition: 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+  left: 39px;
+  color: black;
+  font-family: "Font Awesome 6 Free";
+  content: "\f00c";
+  font-weight: 900;
+}
+/* end toggle switch */
+/* start setting-control */
+.setting-control {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+.setting-control > div {
+  width: 450px;
+}
+@media (max-width: 767px) {
+  .setting-control {
+    grid-template-columns: minmax(100px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+  .setting-control > div {
+    width: 260px;
+  }
+}
+.setting-control .site-control .close-message {
+  border: 2px solid #ccc;
+  resize: none;
+  min-height: 130px;
+}
+/* end setting-control */
+/* start general info */
+.general-info .gi-row input[type="email"] {
+  width: calc(100% - 60px);
+  cursor: no-drop;
+}
+/* end general info */
+/* start social info */
+.social-info .social-app {
+}
+.social-info .social-app i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+  border-radius: 16px 0px 0px 16px;
+  color: gray;
+  background-color: #e5e1e159;
+}
+.social-info .social-app input {
+  flex: 1;
+  border: 1px solid #eee;
+  border-radius: 0px 16px 16px 0px;
+  height: 40px;
+  padding: 5px;
+  background-color: #e5e1e159;
+}
+/* end social info */
+/* start widget control */
+
+.widget-control ul li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+.widget-control ul input {
+  appearance: none;
+  -webkit-appearance: none;
+}
+.widget-control ul label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.widget-control ul label:hover::before {
+  border-color: var(--blue-alt-color);
+}
+.widget-control ul label:before,
+.widget-control ul label:after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+  width: 15px;
+  height: 15px;
+}
+.widget-control ul label:before {
+  content: "";
+  border: 2px solid #9f9595;
+}
+.widget-control ul label:after {
+  font-family: "Font Awesome 6 Free";
+  content: "\f00c";
+  font-weight: 900;
+  background-color: var(--blue-color);
+  color: white;
+  font-size: 12px;
+  padding: 2px;
+  text-align: center;
+  transform: scale(0) rotate(360deg);
+  transition: 0.3s;
+}
+.widget-control ul input[type="checkbox"]:checked + label::after {
+  transform: scale(1);
+}
+/* end widget control */
+/* start backup */
+.backup .date {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.backup input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+.backup .date label {
+  position: relative;
+  padding-left: 30px;
+}
+.backup .date label:before,
+.backup .date label:after {
+  content: "";
+  position: absolute;
+}
+.backup .date label:before {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--gray-color);
+  border-radius: 50%;
+  left: 0;
+  top: 50%;
+  margin-top: -10.5px;
+}
+.backup .date label::after {
+  width: 12px;
+  height: 12px;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+  left: 3px;
+  top: 50%;
+  margin-top: -7.5px;
+  border: 2px solid white;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.backup .date input[type="radio"]:checked + label:before {
+  border-color: var(--blue-color);
+}
+.backup .date input[type="radio"]:checked + label:after {
+  transform: scale(1);
+}
+.backup .servers {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+@media (max-width: 767px) {
+  .backup .servers {
+    flex-wrap: wrap;
+  }
+}
+.backup .servers .server {
+  border: 2px solid #eee;
+  position: relative;
+}
+
+.backup .servers .server label {
+  cursor: pointer;
+  text-align: center;
+}
+.backup .servers input[type="radio"]:checked + .server {
+  color: var(--blue-color);
+  border-color: var(--blue-color);
+}
+/* end backup */

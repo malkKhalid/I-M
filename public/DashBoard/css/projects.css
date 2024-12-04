@@ -1,0 +1,111 @@
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --gray-color: #888;
+}
+
+.projects-page {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+.projects-page > div {
+  width: 500px;
+}
+@media (max-width: 767px) {
+  .projects-page {
+    grid-template-columns: minmax(250px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+  .projects-page > div {
+    width: 250px;
+  }
+}
+
+.project .date {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.project h4 {
+  font-weight: normal;
+}
+.project .team {
+  position: relative;
+  min-height: 80px;
+}
+.project .team a {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.project .team a:hover {
+  z-index: 1000;
+}
+.project .team a:nth-child(2) {
+  left: 25px;
+}
+.project .team a:nth-child(3) {
+  left: 50px;
+}
+.project .team a:nth-child(4) {
+  left: 75px;
+}
+.project .team a:nth-child(5) {
+  left: 100px;
+}
+.project .team img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.project .techs {
+  justify-content: flex-end;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+.project .techs span {
+  margin-left: 5px;
+  padding: 8px;
+  width: fit-content;
+}
+.project .info {
+  border-top: 1px solid #eee;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+.project .info .progress {
+  height: 8px;
+  width: 260px;
+  position: relative;
+  border-radius: 6px;
+}
+.project .info span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 6px;
+}
+@media (max-width: 767px) {
+  .project .techs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project .techs span:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  .project .info {
+    flex-direction: column;
+  }
+  .project .info .progress {
+    margin-bottom: 15px;
+    width: 160px;
+  }
+}
